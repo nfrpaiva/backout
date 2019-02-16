@@ -14,7 +14,7 @@ columns = len(cabecalho)
 if response.status_code == 200:
     list = response.json()
     rows = len(list)
-    for i, item in enumerate(list, 1):
+    for i, item in enumerate(list, 2):
         ws.cell(row=i, column=1, value=item['id'])
         ws.cell(row=i, column=2, value=item['name'])
         ws.cell(row=i, column=3, value=item['email'])
